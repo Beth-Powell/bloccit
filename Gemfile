@@ -7,14 +7,19 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.1'
 
 group :production do
-   gem 'pg'
-   gem 'rails_12factor'
- end
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
  # #2
- group :development do
+group :development do
    gem 'sqlite3'
- end
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'rails-controller-testing'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
